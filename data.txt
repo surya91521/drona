@@ -1,0 +1,17 @@
+https://stark-eyrie-84873.herokuapp.com/ |
+https://git.heroku.com/stark-eyrie-84873.git
+
+
+google oauth
+
+clientID - 891951038444-k1bi4knc9j9i4svvvmlu5qenmba67g08.apps.googleusercontent.com
+client secret - mgD4wjAm7j7CFQ_r9k-bKtR5
+
+
+
+mongo atlas
+
+user - bisht
+pass - tIPTKLOtcmRO8ndH
+
+URI: mongodb+srv://bisht:tIPTKLOtcmRO8ndH@cluster0-fflba.mongodb.net/test?retryWrites=true&w=majority
