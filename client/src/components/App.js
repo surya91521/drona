@@ -5,7 +5,7 @@ import Landing from "./Landing";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>Survey New</h2>;
+const CourseNew = () => <h2>New Course</h2>;
 class App extends Component {
   componentDidMount() {
     // lifecycle method and wire his class to get
@@ -21,8 +21,8 @@ class App extends Component {
           <div className="container">
             <Header />
             <Route path="/" exact component={Landing} />
-            <Route path="/surveys" exact component={Dashboard} />
-            <Route path="/surveys/new" exact component={SurveyNew} />
+            <Route path="/courses" exact component={Dashboard} />
+            <Route path="/courses/new" exact component={CourseNew} />
           </div>
         </BrowserRouter>
       </div>
