@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         {
             Intent intent = new Intent(MainActivity.this,User.class);
             startActivity(intent);
+            finish();
         }
 
     }
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             Intent intent = new Intent(MainActivity.this,User.class);
             startActivity(intent);
+            finish();
         } catch (ApiException e) {
             Log.w("Error", "signInResult:failed code=" + e.getStatusCode());
 

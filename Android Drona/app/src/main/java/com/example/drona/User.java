@@ -56,15 +56,12 @@ public class User extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         Intent intent = new Intent(User.this,MainActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 });
 
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        
-    }
+
 }
