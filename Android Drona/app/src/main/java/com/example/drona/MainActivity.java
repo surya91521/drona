@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
 
     SignInButton signin;
+    String personId;
 
     int RC_SIGN_IN =0;
 
@@ -69,7 +70,10 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if(account!=null)
         {
+
+             personId = account.getId();
             Intent intent = new Intent(MainActivity.this,User.class);
+            intent.putExtra("ID",personId);
             startActivity(intent);
             finish();
         }
@@ -92,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            personId = account.getId();
             Intent intent = new Intent(MainActivity.this,User.class);
+            intent.putExtra("ID",personId);
             startActivity(intent);
             finish();
         } catch (ApiException e) {
